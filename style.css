@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Déclaration des polices personnalisées */
+@font-face {
+    font-family: 'liquida';
+    src: url('Super\ Liquida.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'purple';
+    src: url('PurplehazepersonaluseBlack-51n3a.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'pincoya';
+    src: url('pincoyablack.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'neon';
+    src: url('neon.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'nashira';
+    src: url('NashirafreeRegular-9Yw55.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'modular';
+    src: url('modular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'billo';
+    src: url('BILLO___.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'bruce';
+    src: url('BruceForeverRegular-X3jd2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'husky';
+    src: url('Husky\ Stash.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.start-screen {
+    text-align: center;
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.start-screen h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+    font-family:  Arial, sans-serif; 
+}
+
+.start-screen p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #ccc;
+}
+
+.btn {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-family: Arial, sans-serif; 
+}
+
+.btn:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+.animation-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+}
+
+.animated-text {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+    font-family: Arial, sans-serif; 
+}
+
+.profile-pic {
+    display: block;
+    margin: 0 auto 16px;
+    max-width: 60vw;
+    height: auto;
+    /* si vous voulez que le gif apparaisse au-dessus visuellement (overlay), décommentez : */
+    /* position: relative; z-index: 2; */
+}
+
+.dolphin-video {
+    display: block;
+    margin: 0 auto;
+    max-width: 90vw;
+    max-height: 70vh;
+    width: auto;
+    height: auto;
+    background: #000;
+    /* pour forcer la vidéo sous l'image en cas d'overlay, décommentez : */
+    /* position: relative; z-index: 1; */
+}
