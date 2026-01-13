@@ -37,6 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
         startScreen.style.display = 'none';
         animationContainer.style.display = 'flex';
         nextButtonContainer.style.display = 'none';
+        let audio = new Audio("index.mp3");
+        audio.play();
+
         
         currentIndex = -1;
         

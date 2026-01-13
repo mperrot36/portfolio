@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Compétences - Logos tombants</title>
+    <link rel="stylesheet" href="competence.css">
+    <style>
+        /* Style pour l'en-tête */
+        .header {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            text-align: center;
+            z-index: 100;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: #4a9eff;
+        }
+        
+        .subtitle {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+        
+        /* Sol virtuel où les logos atterrissent */
+        .ground {
+            position: absolute;
+            bottom: 10%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.5), transparent);
+            z-index: 50;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Mes Compétences</h1>
+        <div class="subtitle">Les logos tombent du ciel et atterrissent avant de disparaître</div>
+    </div>
+    <div class="ground"></div>
+    <script src="competence.js"></script>
+</body>
+</html>

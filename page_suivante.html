@@ -4,18 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Malo Perrot</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        .main-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .media-container {
+            position: relative;
+            max-width: 60vw;
+            max-height: 60vh;
+            z-index: 1;
+        }
+
+        .dolphin-video {
+            display: block;
+            width: 100%;
+            height: auto;
+            background: #000;
+        }
+
+        .profile-pic {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 80%;
+            height: auto;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .rotating-text {
+            position: absolute;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            user-select: none;
+        }
+
+        .rotating-text:hover {
+            transform: scale(1.2);
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+            
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg) translateX(400px) rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg) translateX(400px) rotate(-360deg);
+            }
+        }
+
+        .text-1 {
+            animation: rotate 30s linear infinite;
+        }
+
+        .text-2 {
+            animation: rotate 30s linear infinite;
+            animation-delay: -6s;
+        }
+
+        .text-3 {
+            animation: rotate 30s linear infinite;
+            animation-delay: -12s;
+        }
+
+        .text-4 {
+            animation: rotate 30s linear infinite;
+            animation-delay: -18s;
+        }
+
+        .text-5 {
+            animation: rotate 30s linear infinite;
+            animation-delay: -24s;
+        }
+
+        @media (max-width: 768px) {
+            .media-container {
+                max-width: 80vw;
+                max-height: 50vh;
+            }
+
+            .rotating-text {
+                font-size: 1.5rem;
+            }
+
+            @keyframes rotate {
+                from {
+                    transform: rotate(0deg) translateX(200px) rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg) translateX(200px) rotate(-360deg);
+                }
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="start-screen" id="startScreen">
-        <!-- GIF au-dessus de la vidéo -->
-        <img src="gfhmj-unscreen.gif" alt="Malo Perrot" class="profile-pic">
+    <div class="main-container">
+        <div class="media-container">
+            
+            <video class="dolphin-video" id="dolphinVideo" autoplay muted loop playsinline>
+                <source src="dauphin.mp4" type="video/mp4">
+                Votre navigateur ne prend pas en charge la lecture de vidéos.
+            </video>
 
-        <!-- Vidéo dauphin en boucle, sans son -->
-        <video class="dolphin-video" id="dolphinVideo" autoplay muted loop playsinline>
-            <source src="dauphin.mp4" type="video/mp4">
-            Votre navigateur ne prend pas en charge la lecture de vidéos.
-        </video>
+            
+            <img src="gfhmj-unscreen.gif" alt="Malo Perrot" class="profile-pic">
+        </div>
+
+      
+        <div class="rotating-text text-1" data-page="formation.html">Formation</div>
+        <div class="rotating-text text-2" data-page="competence.html">Compétences</div>
+        <div class="rotating-text text-3" data-page="experience.html">Expérience</div>
+        <div class="rotating-text text-4" data-page="projets.html">Projets</div>
+        <div class="rotating-text text-5" data-page="profil.html">Profil</div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const rotatingTexts = document.querySelectorAll('.rotating-text');
+            
+            rotatingTexts.forEach(text => {
+                text.addEventListener('click', function() {
+                    const page = this.getAttribute('data-page');
+                    window.location.href = page;
+                });
+            });
+        });
+    </script>
 </body>
 </html>
