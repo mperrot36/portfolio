@@ -83,27 +83,22 @@
         }
 
         .text-1 {
-            animation: rotate 30s linear infinite;
+            animation: rotate 40s linear infinite;
         }
 
         .text-2 {
-            animation: rotate 30s linear infinite;
-            animation-delay: -6s;
+            animation: rotate 40s linear infinite;
+            animation-delay: -10s;
         }
 
         .text-3 {
-            animation: rotate 30s linear infinite;
-            animation-delay: -12s;
+            animation: rotate 40s linear infinite;
+            animation-delay: -20s;
         }
 
         .text-4 {
-            animation: rotate 30s linear infinite;
-            animation-delay: -18s;
-        }
-
-        .text-5 {
-            animation: rotate 30s linear infinite;
-            animation-delay: -24s;
+            animation: rotate 40s linear infinite;
+            animation-delay: -30s;
         }
 
         @media (max-width: 768px) {
@@ -141,11 +136,11 @@
         </div>
 
       
-        <div class="rotating-text text-1" data-page="formation.html">Formation</div>
+        <div class="rotating-text text-1" data-page="formation_et_experiences.html">Formation et <br> Expériences</div>
         <div class="rotating-text text-2" data-page="competence.html">Compétences</div>
-        <div class="rotating-text text-3" data-page="experience.html">Expériences</div>
+        <div class="rotating-text text-3" data-page="profil.html">Profil</div>
         <div class="rotating-text text-4" data-page="projets.html">Projets</div>
-        <div class="rotating-text text-5" data-page="profil.html">Profil</div>
+        
     </div>
 
     <script>
@@ -159,6 +154,12 @@
                 });
             });
         });
+        
+        let audio = new Audio("turip.mp3");
+        audio.loop = true;
+        audio.play();
+
+    
     </script>
 </body>
 </html>
